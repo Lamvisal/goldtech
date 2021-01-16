@@ -1,0 +1,91 @@
+.vc-contact {
+    $el: &;
+
+    &__info {
+        color: #020000;
+        font-size: 1.4rem;
+        position: relative;
+
+        strong {
+            color: #020000;
+            font-size: 1.4rem;
+        }
+
+        a {
+            color: #020000;
+            font-size: 1.4rem;
+            display: inline-block;
+            text-decoration: none;
+            transition: color .5s;
+
+            &:hover {
+                color: #f68e56;
+            }
+        }
+
+        &--icon {
+            @extend #{$el}__info;
+            padding-left: 15px;
+
+            &::before {
+                background-color: #f68e56;
+                border-radius: 50%;
+                content: "";
+                height: 5px;
+                left: 0;
+                position: absolute;
+                top: 7px;
+                width: 5px;
+            }
+        }
+    }
+
+    &__social {
+        margin-bottom: 15px;
+        text-align: left;
+        width: 100%;
+
+        a {
+            align-items: center;
+            background-image: linear-gradient(to bottom, rgb(184,133,24) 0%, rgb(251,229,139) 42%, rgb(184,133,24) 100%);
+            box-shadow: 0px 2px 2.88px 0.12px rgba(#000, .35);
+            border-radius: 50%;
+            display: inline-flex;
+            height: 25px;
+            font-size: 0;
+            justify-content: center;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: background-color .5s;
+            width: 25px;
+
+            &:hover {
+                background-image: none;
+                background-color: #f68e56;
+            }
+        }
+    }
+
+    @include down(lg) {
+        &__info {
+            font-size: 1.5rem;
+
+            a {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    @include down(md) {
+
+        &__social {
+            justify-content: center !important;
+
+            a {
+                margin: 0 5px;
+            }
+        }
+    }
+
+    @include down(sm) {}
+}

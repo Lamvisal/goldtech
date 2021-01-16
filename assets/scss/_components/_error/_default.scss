@@ -1,0 +1,22 @@
+.vc-error {
+    &__img {
+        margin-bottom: 30px;
+    }
+
+    &__txt {
+        color: #e4451d;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    @include down(md) {
+        &__img {
+            margin-bottom: 15px;
+        }
+
+        &__txt {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+    }
+}

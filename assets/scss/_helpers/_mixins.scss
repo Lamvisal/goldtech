@@ -1,0 +1,27 @@
+@mixin down($media) {
+	@if(map-has-key($down, $media)) {
+		@media only screen and (max-width: map-get($down, $media)) {
+			@content;
+		}
+	}
+
+	@else {
+		@media only screen and (max-width: $media + 'px') {
+			@content;
+		}
+	}
+}
+
+@mixin up($media) {
+	@if(map-has-key($up, $media)) {
+		@media only screen and (min-width: map-get($up, $media)) {
+			@content;
+		}
+	}
+
+	@else {
+		@media only screen and (min-width: $media + 'px') {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+.vtbtt {
+    background-color: #fff;
+    box-shadow: 0 3px 10px 0 rgba(#000, .25);
+    bottom: -60px;
+    border-radius: 50%;
+    display: inline-block;
+    height: 38px;
+    position: fixed;
+    right: 25px;
+    text-decoration: none;
+    transition: opacity .5s, bottom .5s;
+    width: 38px;
+    z-index: 999;
+
+    &.active {
+        bottom: 90px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        opacity: .75;
+    }
+
+    &::before,
+    &::after {
+        background-color: #e4451d;
+        content: "";
+        height: 10px;
+        position: absolute;
+        top: 13px;
+        transition: background-color .5s;
+        width: 3px;
+    }
+
+    &::before {
+        left: 15px;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        left: 21px;
+        transform: rotate(-45deg);
+    }
+
+    @include down(sm) {
+        right: 16px;
+
+        &.active {
+            bottom: 65px;
+        }
+
+        &::before,
+        &::after {
+            top: 13px;
+            width: 2px;
+        }
+    }
+}

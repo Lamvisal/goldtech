@@ -1,0 +1,137 @@
+* {
+    outline: 0 !important;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+html {
+    font-family: $base-ff;
+    font-size: 10px;
+    height: 100%;
+    line-height: $lh;
+    width: 100%;
+}
+
+body {
+    background-color: $base-bg;
+    color: $base-c;
+    font-family: $base-ff;
+    height: 100%;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: $fs-08;
+}
+
+h2 {
+    font-size: $fs-07;
+}
+
+h3 {
+    font-size: $fs-06;
+}
+
+h4 {
+    font-size: $fs-05;
+}
+
+h5 {
+    font-size: $fs-04;
+}
+
+h6 {
+    font-size: $fs-03;
+}
+
+div,
+a,
+p,
+span,
+label,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+section,
+option {
+    font-size: $font-xl;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+iframe {
+    border: 0;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+@include down(lg) {
+
+    div,
+    a,
+    p,
+    span,
+    label,
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea,
+    section,
+    option {
+        font-size: $font-lg;
+    }
+}
+
+@include down(sm) {
+
+    div,
+    a,
+    p,
+    span,
+    label,
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea,
+    section,
+    option {
+        font-size: $font-md;
+    }
+}
+
+@include down(sm) {
+
+    div,
+    a,
+    p,
+    span,
+    label,
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea,
+    section,
+    option {
+        font-size: $font-sm;
+    }
+}

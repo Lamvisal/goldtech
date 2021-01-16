@@ -1,0 +1,18 @@
+.vc-contact {
+
+    &__map {
+        font-size: 0;
+        width: 100%;
+
+        iframe {
+            height: 300px;
+            width: 100%;
+        }
+    }
+
+    @include down(md) {
+        &__map {
+            margin-top: 15px;
+        }
+    }
+}

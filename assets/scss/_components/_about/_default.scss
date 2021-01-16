@@ -1,0 +1,123 @@
+.vc-about {
+    $el: &;
+    display: block;
+
+    &--certificate {
+        .swiper-pagination {
+            bottom: 0;
+            margin-top: 30px;
+            position: relative;
+            text-align: center;
+            width: 100%;
+
+            &-bullet {
+                background-color: #e4451d;
+                border-radius: 5px;
+                border: 0;
+                height: 5px;
+                margin: 0 3px;
+                opacity: 1;
+                position: relative;
+                transition: background-color .5s;
+                width: 30px;
+                
+                &-active {
+                    background-color: rgba(#e4451d, .5);
+                }
+            }
+        }
+
+        #{$el}__item {
+            border-radius: 15px;
+            box-shadow: 0px 2px 8px 0px rgba(#000, 0.29);
+            padding: 15px;
+            margin: 5px;
+        }
+    }
+
+    &--card {
+        border-radius: 15px;
+        background-color: #e4451d;
+        padding: 30px;
+
+        #{$el}__txt {
+            color: #fff;
+            font-size: 1.6rem;
+            margin-bottom: 0;
+        }
+
+        #{$el}__ttl {
+            color: #fff;
+            font-size: 2.4rem;
+        }
+    }
+
+    &--index {
+        @extend .vc-about;
+        padding: 100px 0;
+        position: relative;
+
+        #{$el}__txt {
+            color: #000;
+            font-size: 1.6rem;
+        }
+
+        #{$el}__readmore {
+            color: #f68e56;
+            font-size: 1.6rem;
+        }
+
+        #{$el}__img {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @include down(lg) {
+        &--index {
+            padding: 50px 0;
+
+            i {
+                display: block;
+            }
+
+            img {
+                margin-bottom: 0;
+            }
+
+            #{$el}__txt {
+                font-size: 1.5rem;
+            }
+
+            #{$el}__readmore {
+                display: inline-block;
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    @include down(md) {
+        &--index {
+            padding-bottom: 0;
+            text-align: center;
+
+            #{$el}__txt {
+                text-align: justify;
+            }
+
+            #{$el}__img {
+                margin: 0 -45px;
+            }
+        }
+    }
+
+    @include down(sm) {
+        &--index {
+            #{$el}__img {
+                margin: 0 -15px;
+            }
+        }
+    }
+}

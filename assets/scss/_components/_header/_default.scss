@@ -1,0 +1,31 @@
+.vc-header {
+    $el: &;
+    background-color: #e4451d;
+    height: 195px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: height .5s;
+    width: 100%;
+    z-index: 9999;
+
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+
+        &>[class^="col-"] {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    @include up(xl) {
+        &.fixed {
+            height: 105px;
+        }
+    }
+
+    @include down(lg) {
+        height: 60px;
+    }
+}

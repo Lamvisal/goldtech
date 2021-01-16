@@ -1,0 +1,39 @@
+.vc-banner {
+    $el: &;
+    position: relative;
+    width: 100%;
+
+    .swiper-pagination {
+        bottom: 15px;
+        text-align: center;
+        width: 100%;
+
+        &-bullet {
+            background-color: #e4451d;
+            border-radius: 5px;
+            border: 0;
+            height: 5px;
+            margin: 0 3px;
+            opacity: 1;
+            position: relative;
+            transition: background-color .5s;
+            width: 30px;
+            
+            &-active {
+                background-color: rgba(#e4451d, .5);
+            }
+        }
+    }
+
+    img {
+        margin: auto;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    @include down(lg) {}
+
+    @include down(md) {}
+
+    @include down(sm) {}
+}

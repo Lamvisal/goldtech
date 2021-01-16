@@ -1,0 +1,196 @@
+.vc-news {
+    $el: &;
+    overflow: hidden;
+
+    &--index {
+        @extend .vc-news;
+        padding: 0 0 50px;
+        position: relative;
+    }
+
+    &--sidebar {
+        @extend .vc-news;
+        border-radius: 15px;
+        box-shadow: 0px 2px 8px 0px rgba(#000, 0.29);
+        padding: 15px;
+
+        #{$el}__item {
+            background: url(#{$img}icons/icon-arrow-right-black.png) no-repeat 0 5px/27px;
+            border-bottom: 1px solid #d4d4d4;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            padding-left: 32px;
+
+            &:hover {
+                background: url(#{$img}icons/icon-arrow-right-orange.png) no-repeat 0 5px/27px;
+            }
+
+            &:last-child {
+                border-bottom: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+        
+        #{$el}__ttl {
+            color: #000;
+            font-size: 1.6rem;
+
+            &:hover {
+                color: #e4451d;
+            }
+        }
+    }
+
+    &--default {
+        @extend .vc-news;
+
+        #{$el}__ttl {
+            color: #000;
+            font-size: 1.6rem;
+
+            &:hover {
+                color: #e4451d;
+            }
+        }
+
+        #{$el}__txt {
+            color: #000;
+            font-size: 1.6rem;
+        }
+    }
+
+    &--index-info {
+        @extend .vc-news;
+        background-color: #e4451d;
+        padding: 100px 0;
+        position: relative;
+
+        #{$el}__ttl {
+            color: #fff;
+            font-size: 2.4rem;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+        #{$el}__avatar {
+            height: 90px;
+            padding: 0;
+
+            img {
+                height: auto;
+                left: 0;
+                margin: 0 auto;
+                transform: translate(0) scale(1);
+                right: 0;
+                top: 0;
+                width: 87px;
+            }
+
+            &:hover {
+                img {
+                    transform: translate(0) scale(1);
+                }
+            }
+        }
+    }
+
+    &__ttl {
+        color: #000;
+        display: inline-block;
+        font-size: 1.5rem;
+        transition: color .5s;
+
+        &:hover {
+            color: #f68e56;
+            text-decoration: none;
+        }
+    }
+
+    &__txt {
+        color: #fff;
+    }
+
+    &__date {
+        color: #9a9a9a;
+        display: block;
+        font-size: 1.3rem;
+    }
+
+    &__avatar {
+        display: block;
+        font-size: 0;
+        overflow: hidden;
+        padding-top: calc(330 * 100% / 570);
+        position: relative;
+        width: 100%;
+
+        img {
+            position: absolute;
+            height: 100%;
+            left: 50%;
+            margin: auto;
+            object-fit: cover;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            transition: opacity .5s, transform .5s;
+            z-index: 0;
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            img {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+    }
+
+    @include down (lg) {
+
+        .swiper-pagination {
+            bottom: 0;
+            margin-top: 30px;
+            position: relative;
+            text-align: center;
+            width: 100%;
+    
+            &-bullet {
+                background-color: #e4451d;
+                border-radius: 5px;
+                border: 0;
+                height: 5px;
+                margin: 0 3px;
+                opacity: 1;
+                position: relative;
+                transition: background-color .5s;
+                width: 30px;
+                
+                &-active {
+                    background-color: rgba(#e4451d, .5);
+                }
+            }
+        }
+    }
+
+    @include down (md) {
+    }
+
+    @include down (sm) {
+        &__ttl {
+            font-size: 1.5rem;
+            min-height: auto;
+        }
+
+        &__txt {
+            font-size: 1.5rem;
+        }
+
+        .swiper-pagination {
+            margin-top: 0;
+        }
+    }
+}

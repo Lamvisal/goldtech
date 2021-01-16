@@ -1,0 +1,41 @@
+.vc-headline {
+    $el: &;
+    font-family: $ff-02;
+    font-size: 3.3rem;
+
+    &--default {
+        @extend .vc-headline;
+        color: #e4451d;
+    }
+
+    &--sidebar {
+        @extend .vc-headline;
+        color: #e4451d;
+        font-size: 2.5rem;
+    }
+
+    &--answer {
+        @extend .vc-headline;
+        background-color: #e4451d;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 2.4rem;
+        padding: 10px 15px;
+    }
+
+    &--white {
+        @extend .vc-headline;
+        color: #fff;
+    }
+
+    @include down(lg) {
+    }
+
+    @include down(md) {
+        font-size: 2.6rem;
+    }
+
+    @include down(sm) {
+        font-size: 2.2rem;
+    }
+}
